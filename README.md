@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BarVista Display Website
 
 An English B2B website starter for a custom stretched bar LCD display manufacturer. It uses Next.js, TypeScript, Tailwind CSS and the App Router, and is ready to deploy to Vercel.
@@ -51,3 +52,7 @@ No API keys, credentials or private data are included in this project.
 - Test inquiry flow on desktop and mobile.
 - Add privacy policy / cookie information if required for your target markets and tools.
 - Verify the production sitemap, robots file, canonical URLs and Search Console setup.
+=======
+# zhengfangchuangshe
+The official website of customized LCD squire screen
+>>>>>>> origin/main
