@@ -1,14 +1,117 @@
-export type Product = { slug: string; name: string; size: string; resolution: string; brightness: string; interface: string; description: string; category: string; };
+export type Product = {
+  slug: string;
+  name: string;
+  model: string;
+  size: string;
+  resolution: string;
+  brightness: string;
+  interface: string;
+  touch: string;
+  description: string;
+  category: string;
+  applications: string[];
+  features: string[];
+};
+
 export const products: Product[] = [
- { slug:"23-inch-shelf-edge",name:"23.1-inch Shelf Edge Display",size:"23.1 in",resolution:"1920 × 158",brightness:"700 nits",interface:"HDMI / Android",description:"Example data: a slim retail shelf display for price, promotion and product information.",category:"Shelf Edge Displays" },
- { slug:"28-inch-stretched",name:"28.6-inch Stretched Bar LCD",size:"28.6 in",resolution:"1920 × 540",brightness:"500 nits",interface:"HDMI / LVDS",description:"Example data: a versatile bar type LCD display for digital signage projects.",category:"Stretched Bar LCD Displays" },
- { slug:"37-inch-ultra-wide",name:"37-inch Ultra-wide LCD Display",size:"37 in",resolution:"1920 × 540",brightness:"700 nits",interface:"HDMI / eDP",description:"Example data: a wide-format display for wayfinding and commercial advertising.",category:"Ultra-wide LCD Displays" },
- { slug:"43-inch-high-brightness",name:"43-inch High Brightness Bar Display",size:"43 in",resolution:"3840 × 720",brightness:"1000 nits",interface:"HDMI / Android",description:"Example data: a bright bar display concept for high-ambient-light environments.",category:"High Brightness Displays" },
- { slug:"32-inch-industrial",name:"32-inch Industrial Bar Display",size:"32 in",resolution:"1920 × 360",brightness:"500 nits",interface:"HDMI / LVDS",description:"Example data: a display configuration for equipment interfaces and process information.",category:"Industrial Bar Displays" },
- { slug:"21-inch-touch",name:"21.5-inch Touch Bar Display",size:"21.5 in",resolution:"1920 × 480",brightness:"450 nits",interface:"HDMI / USB Touch",description:"Example data: an interactive bar display for self-service and smart retail installations.",category:"Touch Bar Displays" }
+  {
+    slug: "37-inch-stretched-bar-lcd-display",
+    name: "37-inch Stretched Bar LCD Display",
+    model: "ZF370AJ1-TE1",
+    size: '37"',
+    resolution: "1920 × 540",
+    brightness: "700 nits",
+    interface:
+      "HDMI and USB standard; optional RJ45, Wi-Fi and RS232",
+    touch: "Optional customization",
+    description:
+      "A commercial-grade ultra-wide LCD display designed for narrow installation spaces, retail shelves, digital signage, transportation systems, kiosks and industrial equipment.",
+    category: "Stretched Bar LCD Displays",
+    applications: [
+      "Retail shelves",
+      "Supermarkets",
+      "Shopping malls",
+      "Transportation information systems",
+      "Digital signage",
+      "Exhibitions",
+      "Vending machines",
+      "Self-service kiosks",
+      "Industrial equipment",
+    ],
+    features: [
+      "Ultra-wide stretched design for narrow installation spaces",
+      "High-definition image quality with vivid colors and wide viewing angles",
+      "Commercial-grade components for reliable 24/7 operation",
+      "Standard HDMI and USB interfaces",
+      "Optional RJ45, Wi-Fi and RS232 connectivity",
+      "Supports video, image and scrolling-text playback",
+      "Optional remote content-management capability",
+      "Landscape, portrait, wall-mounted and embedded installation",
+      "Custom size, resolution, brightness, enclosure, interface, operating system and touch function",
+    ],
+  },
+  {
+    slug: "23-6-inch-round-lcd-display",
+    name: "23.6-inch Round LCD Display",
+    model: "YX236AJ1-TE1",
+    size: '23.6"',
+    resolution: "1280 × 1280",
+    brightness: "700 nits",
+    interface:
+      "HDMI and USB standard; optional RJ45, Wi-Fi and RS232",
+    touch: "Optional customization",
+    description:
+      "A distinctive circular LCD display developed for creative commercial spaces, brand presentation, exhibitions, smart devices and customized visual installations.",
+    category: "Round LCD Displays",
+    applications: [
+      "Retail stores",
+      "Shopping malls",
+      "Restaurants",
+      "Hotels",
+      "Museums",
+      "Exhibitions",
+      "Brand showrooms",
+      "Smart-home devices",
+      "Interactive installations",
+    ],
+    features: [
+      "Distinctive circular design for stronger visual impact",
+      "1280 × 1280 high-definition resolution",
+      "Vivid colors and wide viewing angles",
+      "Commercial-grade components for reliable 24/7 operation",
+      "Standard HDMI and USB interfaces",
+      "Optional RJ45, Wi-Fi and RS232 connectivity",
+      "Supports video, image and advertising-content playback",
+      "Optional remote content updates",
+      "Wall-mounted, embedded, desktop and customized installation",
+      "Custom brightness, enclosure, interface, operating system, logo branding and touch function",
+    ],
+  },
 ];
+
 export const blogPosts = [
- { slug:"what-is-a-stretched-bar-lcd-display",title:"What Is a Stretched Bar LCD Display?",description:"A practical introduction to the wide-format display category and how it is used in commercial projects.",body:"A stretched bar LCD display is a long, narrow display format designed for content where a conventional screen is too tall or too wide. Its proportions make it useful in shelf edges, transport information, menu boards and compact advertising locations.\n\nFor a project, screen size is only one part of the decision. Resolution, brightness, interface, enclosure and mounting all determine whether a bar type LCD display works in the intended environment. Starting with the installation space and viewing distance helps a display supplier recommend a sensible configuration." },
- { slug:"how-to-choose-a-shelf-edge-display",title:"How to Choose a Shelf Edge Display",description:"Key considerations for selecting a shelf edge display that fits retail operations and content needs.",body:"A shelf edge display needs to fit its retail fixture as well as its communication goal. Measure the available rail or shelf length, then consider the information customers need to see at a typical aisle viewing distance.\n\nBrightness, content management, power routing and mounting are important practical topics. For larger rollouts, prototype testing is valuable: it can confirm mechanical fit, legibility and the workflow for updating content before production quantities are planned." },
- { slug:"ultra-wide-lcd-smart-retail",title:"Applications of Ultra-wide LCD Displays in Smart Retail",description:"How ultra-wide LCD displays can support product information and targeted communication in smart retail.",body:"Ultra-wide LCD displays can give smart retail teams a flexible surface for pricing, promotion, wayfinding and product storytelling. A long display can sit where customers naturally look, including shelf edges and end caps.\n\nThe best use cases begin with a clear content plan. Retailers should define which messages are useful, how frequently they change and who maintains them. The display hardware can then be matched to the project’s brightness, connectivity and installation requirements." }
+  {
+    slug: "what-is-a-stretched-bar-lcd-display",
+    title: "What Is a Stretched Bar LCD Display?",
+    description:
+      "An introduction to stretched bar LCD displays and their common commercial and industrial applications.",
+    body:
+      "A stretched bar LCD display is a long, narrow display format designed for applications where a conventional screen is too tall or too wide. It is commonly used in retail shelves, transportation systems, digital signage, industrial equipment and compact advertising spaces.\n\nWhen selecting a stretched display, buyers should consider screen size, resolution, brightness, interface, mounting structure, enclosure and operating environment. ZF provides flexible OEM and ODM customization according to project requirements.",
+  },
+  {
+    slug: "how-to-choose-a-custom-lcd-display",
+    title: "How to Choose a Custom LCD Display",
+    description:
+      "Key factors to consider when selecting a custom LCD display for commercial equipment and system integration.",
+    body:
+      "Choosing a custom LCD display starts with the installation space and intended application. Important factors include screen dimensions, resolution, brightness, viewing angle, interface, touch requirements, operating system and mounting method.\n\nPrototype testing is recommended before mass production because it helps verify mechanical fit, display quality, connectivity and overall system compatibility.",
+  },
+  {
+    slug: "applications-of-round-lcd-displays",
+    title: "Applications of Round LCD Displays",
+    description:
+      "How round LCD displays create distinctive visual experiences in retail, exhibitions and smart devices.",
+    body:
+      "Round LCD displays offer a visually distinctive alternative to traditional rectangular screens. They are commonly used in retail stores, hotels, restaurants, museums, brand showrooms, smart-home devices and interactive installations.\n\nA customized circular display can support different brightness levels, interfaces, enclosures, operating systems, mounting methods and brand-design requirements.",
+  },
 ];

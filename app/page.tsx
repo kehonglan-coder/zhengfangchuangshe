@@ -1,3 +1,348 @@
-import Link from "next/link"; import { products } from "@/lib/data"; import { ArrowLink, Placeholder, SectionTitle } from "@/components/ui";
-const applications=["Smart retail shelves","Supermarkets","Digital signage","Transportation","Industrial equipment","Vending machines","Gaming equipment","Commercial advertising"];
-export default function Home(){return <main><section className="hero"><div><p className="eyebrow">Custom LCD display manufacturer</p><h1>Custom Stretched Bar LCD Displays for Global Display Solutions</h1><p>We develop flexible ultra-wide LCD display solutions for retail, digital signage, transportation, industrial equipment and commercial presentation.</p><div className="hero-actions"><Link className="button" href="/contact">Get a Quote</Link><Link className="button button-outline" href="/products">View Products</Link></div></div><div className="screen-art"><div className="screen" aria-label="Illustrative ultra-wide display graphic" /></div></section><section className="section"><SectionTitle eyebrow="Built around your project" title="Display capability with a practical engineering mindset" text="We focus on the details that make a custom bar display suitable for your space, content and integration."/><div className="grid grid-4">{[["01","Flexible formats","Bar type LCD display sizes and proportions aligned to installation space."],["02","Integration options","Interfaces, touch, Android or Windows configurations and mounting choices."],["03","Production support","A clear path from sample confirmation to batch delivery."],["04","Global communication","Project-oriented support for overseas buyers, integrators and distributors."]].map(([n,t,d])=><div className="card" key={t}><p className="number">{n}</p><h3>{t}</h3><p>{d}</p></div>)}</div></section><section className="section section-alt"><SectionTitle eyebrow="Product range" title="Bar display formats for commercial and industrial projects"/><div className="grid grid-3">{["Stretched Bar LCD Displays","Shelf Edge Displays","Ultra-wide LCD Displays","Industrial Bar Displays","Touch Bar Displays","High Brightness Displays"].map((name)=><div className="card" key={name}><Placeholder label={`${name} product image`} /><h3>{name}</h3><ArrowLink href="/products">Explore category</ArrowLink></div>)}</div></section><section className="section"><SectionTitle eyebrow="Example catalogue data" title="Popular display starting points" text="The configurations below are sample data only. Replace them with your approved products and specifications."/><div className="grid grid-3">{products.slice(0,3).map(p=><div className="card product-card" key={p.slug}><Placeholder label={`${p.name} image`} /><div><p className="eyebrow">Example product</p><h3>{p.name}</h3><div className="specs"><span>{p.size}</span><span>{p.resolution}</span><span>{p.brightness}</span><span>{p.interface}</span></div><ArrowLink href={`/products/${p.slug}`}>View Details</ArrowLink></div></div>)}</div></section><section className="section section-alt"><SectionTitle eyebrow="Where they work" title="Designed for the places where information needs to be seen"/><div className="grid grid-4">{applications.map(a=><Link href="/contact" className="card" key={a}><h3>{a}</h3><p>Discuss a display configuration for this application.</p><span className="arrow-link">Send inquiry →</span></Link>)}</div></section><section className="section"><div className="split"><div><SectionTitle eyebrow="Custom development" title="A transparent path from brief to delivery"/><div className="grid grid-3 process">{["Requirements","Evaluation","Design","Sample","Validation","Production"].map(x=><div className="card" key={x}><h3>{x}</h3><p>Project stage aligned to your technical and commercial requirements.</p></div>)}</div></div><div className="dark-panel"><p className="eyebrow">Why work with us</p><h2>Custom LCD display solutions should fit the whole project.</h2><p>We can scope screen size, resolution, brightness, touch, interface, housing, operating system, mounting, logo and packaging around your application.</p><Link className="button" href="/custom-solutions">Explore custom solutions</Link></div></div></section><section className="section section-alt"><div className="split"><Placeholder className="detail-image" label="Factory, assembly or quality-control photography"/><div><SectionTitle eyebrow="Production & quality" title="Build confidence through clear process and verification" text="Incoming material inspection, display performance checks, aging, brightness, color, interface, appearance and packaging inspection can be planned into the project workflow."/><ArrowLink href="/quality-control">View quality control approach</ArrowLink></div></div></section><section className="section"><div className="dark-panel"><p className="eyebrow">Start a conversation</p><h2>Need a custom stretched display for your next project?</h2><p>Share your application, target screen size and estimated quantity. We will use your brief to prepare a focused next step.</p><Link className="button" href="/contact">Request a Quote</Link></div></section></main>}
+import Link from "next/link";
+import { products } from "@/lib/data";
+import {
+  ArrowLink,
+  Placeholder,
+  SectionTitle,
+} from "@/components/ui";
+
+const applications = [
+  "Retail Shelves",
+  "Supermarkets & Shopping Malls",
+  "Digital Signage",
+  "Transportation Systems",
+  "Vending Machines",
+  "Self-service Kiosks",
+  "Industrial Equipment",
+  "Exhibitions & Brand Showrooms",
+];
+
+const capabilities = [
+  {
+    number: "01",
+    title: "Custom Display Formats",
+    description:
+      "Stretched bar, square, round and non-standard LCD display formats designed around your installation requirements.",
+  },
+  {
+    number: "02",
+    title: "Flexible Configuration",
+    description:
+      "Screen size, brightness, interface, touch function, operating system and enclosure can be customized.",
+  },
+  {
+    number: "03",
+    title: "OEM & ODM Support",
+    description:
+      "Professional support from project evaluation and sample development to batch production.",
+  },
+  {
+    number: "04",
+    title: "Reliable Manufacturing",
+    description:
+      "Commercial-grade components and quality-control procedures support stable, long-term operation.",
+  },
+];
+
+const productCategories = [
+  {
+    name: "Stretched Bar LCD Displays",
+    description:
+      "Ultra-wide displays for retail shelves, digital signage, transportation and industrial equipment.",
+  },
+  {
+    name: "Round LCD Displays",
+    description:
+      "Distinctive circular displays for retail spaces, exhibitions, smart devices and creative installations.",
+  },
+  {
+    name: "Square LCD Displays",
+    description:
+      "Square-format LCD solutions for commercial equipment, control systems and smart terminals.",
+  },
+  {
+    name: "High Brightness Displays",
+    description:
+      "Bright, clear display solutions for demanding commercial and high-ambient-light environments.",
+  },
+  {
+    name: "Touch LCD Displays",
+    description:
+      "Optional touch integration for self-service terminals, interactive equipment and smart applications.",
+  },
+  {
+    name: "Custom LCD Solutions",
+    description:
+      "Customized size, resolution, enclosure, interface, operating system, mounting and brand appearance.",
+  },
+];
+
+const developmentProcess = [
+  {
+    title: "Requirements",
+    description:
+      "Share your application, target size, specifications and estimated quantity.",
+  },
+  {
+    title: "Evaluation",
+    description:
+      "Our team reviews technical feasibility and recommends a suitable configuration.",
+  },
+  {
+    title: "Design",
+    description:
+      "Display, interface, housing, mounting and system details are confirmed.",
+  },
+  {
+    title: "Sample",
+    description:
+      "A prototype or sample is prepared for functional and appearance verification.",
+  },
+  {
+    title: "Validation",
+    description:
+      "Performance, interface, brightness, appearance and installation are checked.",
+  },
+  {
+    title: "Production",
+    description:
+      "Approved products move into controlled batch production and delivery.",
+  },
+];
+
+export default function Home() {
+  return (
+    <main>
+      <section className="hero">
+        <div>
+          <p className="eyebrow">
+            Custom LCD Display Manufacturer Since 2008
+          </p>
+
+          <h1>
+            Custom LCD Displays for Commercial and Industrial Applications
+          </h1>
+
+          <p>
+            Guangzhou Zhengfang Chuangshe Electronic Technology Co.,
+            Ltd. specializes in stretched bar, round, square and custom
+            LCD display solutions. We provide flexible OEM and ODM
+            services for global equipment manufacturers, integrators
+            and commercial display projects.
+          </p>
+
+          <div className="hero-actions">
+            <Link className="button" href="/contact">
+              Get a Quote
+            </Link>
+
+            <Link
+              className="button button-outline"
+              href="/products"
+            >
+              Explore Products
+            </Link>
+          </div>
+        </div>
+
+        <div className="screen-art">
+          <div
+            className="screen"
+            aria-label="Custom ultra-wide LCD display illustration"
+          />
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionTitle
+          eyebrow="About ZF"
+          title="Display solutions developed around your project"
+          text="Based in Guangzhou, China, ZF provides customized LCD display products for retail, advertising, transportation, industrial equipment and smart commercial applications."
+        />
+
+        <div className="grid grid-4">
+          {capabilities.map((item) => (
+            <div className="card" key={item.title}>
+              <p className="number">{item.number}</p>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <SectionTitle
+          eyebrow="Product Range"
+          title="Custom LCD display formats for different applications"
+          text="Choose a standard starting point or work with us to develop a display configuration for your equipment and installation environment."
+        />
+
+        <div className="grid grid-3">
+          {productCategories.map((category) => (
+            <div className="card" key={category.name}>
+              <Placeholder
+                label={`${category.name} product image`}
+              />
+
+              <h3>{category.name}</h3>
+              <p>{category.description}</p>
+
+              <ArrowLink href="/products">
+                Explore Category
+              </ArrowLink>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionTitle
+          eyebrow="Featured Products"
+          title="Reliable starting points for your display project"
+          text="Explore selected ZF display products. Specifications and configurations can be adjusted according to project requirements."
+        />
+
+        <div className="grid grid-3">
+          {products.slice(0, 3).map((product) => (
+            <div
+              className="card product-card"
+              key={product.slug}
+            >
+              <Placeholder label={`${product.name} image`} />
+
+              <div>
+                <p className="eyebrow">ZF Display Product</p>
+                <h3>{product.name}</h3>
+
+                <div className="specs">
+                  <span>{product.size}</span>
+                  <span>{product.resolution}</span>
+                  <span>{product.brightness}</span>
+                  <span>{product.interface}</span>
+                </div>
+
+                <ArrowLink
+                  href={`/products/${product.slug}`}
+                >
+                  View Details
+                </ArrowLink>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <SectionTitle
+          eyebrow="Applications"
+          title="Designed for environments where information needs to stand out"
+          text="Our display solutions can be configured for a wide range of commercial, industrial and smart-equipment applications."
+        />
+
+        <div className="grid grid-4">
+          {applications.map((application) => (
+            <Link
+              href="/contact"
+              className="card"
+              key={application}
+            >
+              <h3>{application}</h3>
+              <p>
+                Discuss a customized display configuration for this
+                application.
+              </p>
+              <span className="arrow-link">
+                Send Inquiry →
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="split">
+          <div>
+            <SectionTitle
+              eyebrow="Custom Development"
+              title="A clear process from initial idea to batch production"
+              text="ZF works with customers through each stage of display development to reduce uncertainty and improve project efficiency."
+            />
+
+            <div className="grid grid-3 process">
+              {developmentProcess.map((step) => (
+                <div className="card" key={step.title}>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="dark-panel">
+            <p className="eyebrow">OEM & ODM Capabilities</p>
+
+            <h2>
+              A custom LCD display should fit your complete product.
+            </h2>
+
+            <p>
+              We can customize screen size, resolution, brightness,
+              interface, touch function, housing, operating system,
+              mounting structure, logo and packaging according to your
+              project requirements.
+            </p>
+
+            <Link
+              className="button"
+              href="/custom-solutions"
+            >
+              Explore Custom Solutions
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="split">
+          <Placeholder
+            className="detail-image"
+            label="ZF factory, production or quality-control photography"
+          />
+
+          <div>
+            <SectionTitle
+              eyebrow="Production & Quality"
+              title="Reliable quality from sample development to delivery"
+              text="Our project workflow can include incoming material inspection, display performance testing, aging tests, brightness and color checks, interface verification, appearance inspection and packaging inspection."
+            />
+
+            <ArrowLink href="/quality-control">
+              View Our Quality-Control Process
+            </ArrowLink>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="dark-panel">
+          <p className="eyebrow">Start Your Project</p>
+
+          <h2>
+            Need a custom LCD display for your next product?
+          </h2>
+
+          <p>
+            Tell us your application, target size, required
+            specifications and estimated quantity. Zinnia and the ZF
+            team will help you evaluate the next step.
+          </p>
+
+          <Link className="button" href="/contact">
+            Request a Quote
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+}
