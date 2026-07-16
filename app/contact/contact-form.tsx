@@ -1,2 +1,95 @@
-"use client"; import { FormEvent, useState } from "react";
-export function ContactForm(){const [message,setMessage]=useState("");function submit(e:FormEvent<HTMLFormElement>){e.preventDefault();const form=e.currentTarget;if(!form.checkValidity()){form.reportValidity();return}const d=new FormData(form);const body=["Name: "+d.get("name"),"Company: "+d.get("company"),"Country: "+d.get("country"),"Email: "+d.get("email"),"WhatsApp: "+d.get("whatsapp"),"Product type: "+d.get("product"),"Screen size: "+d.get("size"),"Estimated quantity: "+d.get("quantity"),"Application: "+d.get("application"),"Requirements: "+d.get("requirements")].join("%0D%0A");setMessage("Your email app will open with your inquiry details. No form data has been sent by this website.");window.location.href=`mailto:[Company email]?subject=Display%20Inquiry&body=${body}`};return <><form className="form" onSubmit={submit}><label>Name *<input name="name" required /></label><label>Company *<input name="company" required /></label><label>Country *<input name="country" required /></label><label>Email *<input name="email" type="email" required /></label><label>WhatsApp<input name="whatsapp" /></label><label>Product type *<select name="product" required defaultValue=""><option value="" disabled>Select a product type</option><option>Stretched Bar LCD Display</option><option>Shelf Edge Display</option><option>Ultra-wide LCD Display</option><option>Custom Display Solution</option></select></label><label>Screen size<input name="size" placeholder="e.g. 28.6 inch"/></label><label>Estimated quantity<input name="quantity" placeholder="e.g. 100 units"/></label><label className="wide">Application *<input name="application" required placeholder="Where will the display be used?"/></label><label className="wide">Project requirements *<textarea name="requirements" required placeholder="Installation environment, resolution, brightness, interface, timeline…"/></label><label className="wide">File upload placeholder<input type="file" disabled aria-describedby="file-note"/><small id="file-note">File upload needs a backend or storage integration before it can be enabled.</small></label><div className="wide"><button className="button" type="submit">Prepare Email Inquiry</button></div></form>{message&&<p className="notice">{message}</p>}</>}
+"use client";
+
+import { FormEvent, useState } from "react";
+
+export function ContactForm() {
+  const [message, setMessage] = useState("");
+
+  function submit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setMessage("Thank you for your inquiry. We will contact you soon.");
+  }
+
+  return (
+    <div className="contact-container">
+
+      <div className="contact-info">
+<h2>Request a Quote</h2>
+
+
+<p className="intro-text">
+Looking for a customized LCD display solution?
+</p>
+
+
+<p>
+ZF Display specializes in customized LCD display solutions, including stretched bar LCD displays, round LCD displays, square LCD displays and OEM/ODM projects.
+</p>
+
+
+<p>
+Share your project requirements with us. Our engineering team will provide professional technical support and a suitable display solution.
+</p>
+
+      </div>
+
+
+      <form onSubmit={submit} className="contact-form">
+
+        <input
+          name="name"
+          placeholder="Your Name *"
+          required
+        />
+
+        <input
+  name="company"
+  placeholder="Company Name"
+/>
+
+
+<input
+  name="website"
+  placeholder="Company Website"
+/>
+        
+
+       <input
+  name="email"
+  placeholder="Email Address *"
+  type="email"
+/>
+
+
+<input
+  name="size"
+  placeholder="Display Size (e.g. 37 inch)"
+/>
+        <input
+          name="whatsapp"
+          placeholder="WhatsApp Number"
+        />
+
+
+     <textarea
+name="message"
+placeholder="Tell us about your display requirements..."
+rows={3}
+/>
+
+
+     <button type="submit">
+Request Quote
+</button>
+
+        {message && (
+          <p className="success">
+            {message}
+          </p>
+        )}
+
+      </form>
+
+    </div>
+  );
+}

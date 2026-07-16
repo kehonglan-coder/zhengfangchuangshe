@@ -20,60 +20,60 @@ const applications = [
 const capabilities = [
   {
     number: "01",
-    title: "Custom Display Formats",
+    title: "17+ Years Manufacturing Experience",
     description:
-      "Stretched bar, square, round and non-standard LCD display formats designed around your installation requirements.",
+      "Professional LCD display manufacturing experience since 2008, supporting commercial and industrial display projects.",
   },
   {
     number: "02",
-    title: "Flexible Configuration",
+    title: "OEM & ODM Customization",
     description:
-      "Screen size, brightness, interface, touch function, operating system and enclosure can be customized.",
+      "Customize screen size, resolution, brightness, interface, enclosure, operating system and touch functionality.",
   },
   {
     number: "03",
-    title: "OEM & ODM Support",
+    title: "Flexible Display Solutions",
     description:
-      "Professional support from project evaluation and sample development to batch production.",
+      "We provide stretched bar, round, square and other customized LCD display formats for different applications.",
   },
   {
     number: "04",
-    title: "Reliable Manufacturing",
+    title: "Reliable Quality Control",
     description:
-      "Commercial-grade components and quality-control procedures support stable, long-term operation.",
+      "Inspection and testing procedures help ensure stable performance from sample development to batch production.",
   },
 ];
 
-const productCategories = [
+ const productCategories = [
   {
     name: "Stretched Bar LCD Displays",
     description:
-      "Ultra-wide displays for retail shelves, digital signage, transportation and industrial equipment.",
+      "Ultra-wide LCD displays for retail shelves, digital signage, transportation systems, kiosks and industrial equipment.",
   },
   {
     name: "Round LCD Displays",
     description:
-      "Distinctive circular displays for retail spaces, exhibitions, smart devices and creative installations.",
+      "Creative circular LCD displays for retail stores, exhibitions, hotels, restaurants, smart devices and brand showrooms.",
   },
   {
     name: "Square LCD Displays",
     description:
-      "Square-format LCD solutions for commercial equipment, control systems and smart terminals.",
+      "Square-format LCD displays for commercial equipment, industrial control systems, smart terminals and customized devices.",
+  },
+  {
+    name: "Shelf Edge Displays",
+    description:
+      "Slim display solutions designed for supermarket shelves, smart retail systems, pricing information and promotional content.",
   },
   {
     name: "High Brightness Displays",
     description:
-      "Bright, clear display solutions for demanding commercial and high-ambient-light environments.",
+      "High-brightness LCD display solutions for demanding commercial environments and locations with strong ambient light.",
   },
   {
-    name: "Touch LCD Displays",
+    name: "Custom LCD Display Solutions",
     description:
-      "Optional touch integration for self-service terminals, interactive equipment and smart applications.",
-  },
-  {
-    name: "Custom LCD Solutions",
-    description:
-      "Customized size, resolution, enclosure, interface, operating system, mounting and brand appearance.",
+      "Customized screen size, resolution, brightness, interface, enclosure, operating system, mounting structure and touch function.",
   },
 ];
 
@@ -120,16 +120,18 @@ export default function Home() {
           </p>
 
           <h1>
-            Custom LCD Displays for Commercial and Industrial Applications
+           Custom Stretched Bar LCD Displays
+for Global Display Solutions
           </h1>
 
-          <p>
-            Guangzhou Zhengfang Chuangshe Electronic Technology Co.,
-            Ltd. specializes in stretched bar, round, square and custom
-            LCD display solutions. We provide flexible OEM and ODM
-            services for global equipment manufacturers, integrators
-            and commercial display projects.
-          </p>
+          
+            <p>
+  Guangzhou Zhengfang Chuangshe Electronic Technology Co., Ltd.
+is a professional LCD display manufacturer specializing in
+stretched bar displays, round displays and customized display solutions.
+With OEM and ODM capabilities, we serve global customers in retail,
+digital signage and industrial applications.
+</p>
 
           <div className="hero-actions">
             <Link className="button" href="/contact">
@@ -155,10 +157,11 @@ export default function Home() {
 
       <section className="section">
         <SectionTitle
-          eyebrow="About ZF"
-          title="Display solutions developed around your project"
-          text="Based in Guangzhou, China, ZF provides customized LCD display products for retail, advertising, transportation, industrial equipment and smart commercial applications."
-        />
+          
+ eyebrow="Why Choose ZF Display"
+ title="Professional Custom LCD Display Solutions Since 2008"
+ text="With over 17 years of manufacturing experience, we provide reliable OEM and ODM display solutions for global businesses."
+/>
 
         <div className="grid grid-4">
           {capabilities.map((item) => (
@@ -173,10 +176,10 @@ export default function Home() {
 
       <section className="section section-alt">
         <SectionTitle
-          eyebrow="Product Range"
-          title="Custom LCD display formats for different applications"
-          text="Choose a standard starting point or work with us to develop a display configuration for your equipment and installation environment."
-        />
+    eyebrow="Our Products"
+    title="Professional LCD Display Product Portfolio"
+    text="We provide stretched bar LCD displays, round LCD displays, square LCD displays and fully customized display solutions for commercial and industrial applications."
+/>
 
         <div className="grid grid-3">
           {productCategories.map((category) => (

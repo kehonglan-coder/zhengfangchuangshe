@@ -1,94 +1,62 @@
+
 export type Product = {
   slug: string;
   name: string;
-  model: string;
   size: string;
   resolution: string;
   brightness: string;
   interface: string;
-  touch: string;
   description: string;
   category: string;
-  applications: string[];
-  features: string[];
+  model: string;
 };
-
-export const products: Product[] = [
+    export const products: Product[] = [
   {
-    slug: "37-inch-stretched-bar-lcd-display",
-    name: "37-inch Stretched Bar LCD Display",
-    model: "ZF370AJ1-TE1",
-    size: '37"',
-    resolution: "1920 × 540",
-    brightness: "700 nits",
-    interface:
-      "HDMI and USB standard; optional RJ45, Wi-Fi and RS232",
-    touch: "Optional customization",
-    description:
-      "A commercial-grade ultra-wide LCD display designed for narrow installation spaces, retail shelves, digital signage, transportation systems, kiosks and industrial equipment.",
-    category: "Stretched Bar LCD Displays",
-    applications: [
-      "Retail shelves",
-      "Supermarkets",
-      "Shopping malls",
-      "Transportation information systems",
-      "Digital signage",
-      "Exhibitions",
-      "Vending machines",
-      "Self-service kiosks",
-      "Industrial equipment",
-    ],
-    features: [
-      "Ultra-wide stretched design for narrow installation spaces",
-      "High-definition image quality with vivid colors and wide viewing angles",
-      "Commercial-grade components for reliable 24/7 operation",
-      "Standard HDMI and USB interfaces",
-      "Optional RJ45, Wi-Fi and RS232 connectivity",
-      "Supports video, image and scrolling-text playback",
-      "Optional remote content-management capability",
-      "Landscape, portrait, wall-mounted and embedded installation",
-      "Custom size, resolution, brightness, enclosure, interface, operating system and touch function",
-    ],
+    slug:"37-inch-stretched-bar-lcd-display",
+    name:"37-inch Stretched Bar LCD Display",
+    size:"37 inch",
+    resolution:"1920 × 540",
+    brightness:"700 cd/m²",
+    interface:"HDMI / USB (Optional RJ45, Wi-Fi, RS232)",
+    description:"Ultra-wide stretched bar LCD display designed for retail shelves, digital signage, transportation systems and industrial applications.",
+    category:"Stretched Bar LCD Displays",
+    model:"ZF37AJ1-LE1",
   },
+
   {
-    slug: "23-6-inch-round-lcd-display",
-    name: "23.6-inch Round LCD Display",
+    slug:"23-6-inch-round-lcd-display",
+    name:"23.6-inch Round LCD Display",
+    size:"23.6 inch",
+    resolution:"1280 × 1280",
+    brightness:"700 cd/m²",
+    interface:"HDMI / USB (Optional RJ45, Wi-Fi, RS232)",
+    description:"Creative round LCD display solution for retail stores, exhibitions, hotels, restaurants and smart commercial environments.",
+    category:"Round LCD Displays",
     model: "YX236AJ1-TE1",
-    size: '23.6"',
-    resolution: "1280 × 1280",
-    brightness: "700 nits",
-    interface:
-      "HDMI and USB standard; optional RJ45, Wi-Fi and RS232",
-    touch: "Optional customization",
-    description:
-      "A distinctive circular LCD display developed for creative commercial spaces, brand presentation, exhibitions, smart devices and customized visual installations.",
-    category: "Round LCD Displays",
-    applications: [
-      "Retail stores",
-      "Shopping malls",
-      "Restaurants",
-      "Hotels",
-      "Museums",
-      "Exhibitions",
-      "Brand showrooms",
-      "Smart-home devices",
-      "Interactive installations",
-    ],
-    features: [
-      "Distinctive circular design for stronger visual impact",
-      "1280 × 1280 high-definition resolution",
-      "Vivid colors and wide viewing angles",
-      "Commercial-grade components for reliable 24/7 operation",
-      "Standard HDMI and USB interfaces",
-      "Optional RJ45, Wi-Fi and RS232 connectivity",
-      "Supports video, image and advertising-content playback",
-      "Optional remote content updates",
-      "Wall-mounted, embedded, desktop and customized installation",
-      "Custom brightness, enclosure, interface, operating system, logo branding and touch function",
-    ],
   },
-];
+  {
+  slug: "41-inch-square-lcd-display",
 
+  name: "41-inch Square LCD Display",
+
+  size: "41 inch",
+
+  resolution: "1920 × 1492",
+
+  brightness: "500 cd/m²",
+
+  interface: "HDMI / USB (Optional RJ45, Wi-Fi, RS232)",
+
+  description:
+    "Large square LCD display designed for retail stores, digital signage, exhibitions, smart commercial equipment and industrial applications. Featuring high resolution, stable performance and flexible customization options for OEM and ODM projects.",
+
+  category: "Square LCD Displays",
+
+ 
+
+  model: "ZF41AJ1-LE1",
+},
+];
 export const blogPosts = [
   {
     slug: "what-is-a-stretched-bar-lcd-display",

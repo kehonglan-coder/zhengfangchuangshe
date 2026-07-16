@@ -1,1 +1,51 @@
-import type { Metadata } from "next"; import { ContactForm } from "./contact-form"; export const metadata:Metadata={title:"Request a Quote",description:"Request a quote for a custom stretched bar LCD display or ultra-wide display project."}; export default function Contact(){return <main><section className="page-hero"><p className="eyebrow">Contact us</p><h1>Request a Quote for Your Display Project</h1><p>Send a concise project brief. This form prepares an email inquiry and does not claim to submit data to a backend.</p></section><section className="section"><div className="detail-grid"><div><h2>Project inquiry</h2><ContactForm /></div><aside className="dark-panel"><h2>Contact details</h2><p>Email: [Company email]</p><p>WhatsApp: [WhatsApp number]</p><p>Address: [Company address]</p><p>To enable direct form delivery or attachments, connect this form to an approved backend, email API or CRM before launch.</p></aside></div></section></main>}
+import type { Metadata } from "next"; import { ContactForm } from "./contact-form"; export const metadata: Metadata = { title: "Request a Quote", description: "Request a quote for a custom stretched bar LCD display or ultra-wide display project." }; export default function Contact() { return <main><section className="page-hero contact-hero">
+    <p className="eyebrow">
+Request a Quote
+</p>
+
+<h1>
+Contact ZF Display for
+<br />
+Custom LCD Display Solutions
+</h1><p>
+Tell us your display requirements and our engineering team will provide a suitable solution.
+</p></section><section className="section"><div className="detail-grid"><div>
+<ContactForm />
+</div><aside className="dark-panel">
+ <h2>Contact Information</h2>
+ <p>
+<strong>Contact Person:</strong>
+<br />
+Zinnia
+</p>
+ <p>
+<strong>Email:</strong>
+<br />
+<a href="mailto:Ziyizhao0107@gmail.com">
+Ziyizhao0107@gmail.com
+</a>
+</p>
+
+  <p>
+<strong>WhatsApp:</strong>
+<br />
+<a href="https://wa.me/8619570063144">
++86 19570063144
+</a>
+</p>
+
+  <p>
+    <strong>Company:</strong>
+    <br />
+   ZF Display
+(Guangzhou Zhengfang Chuangshe Electronic Technology Co., Ltd.)
+  </p>
+
+  <p>
+    <strong>Location:</strong>
+    <br />
+    Guangzhou, China
+  </p>
+
+ 
+</aside></div></section></main> }

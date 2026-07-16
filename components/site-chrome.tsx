@@ -79,33 +79,43 @@ export function Footer() {
           ))}
         </div>
 
-        <div>
-          <h3>Contact</h3>
+       <div>
+ <h3>Contact</h3>
 
-          <p>
-            <strong>Contact:</strong> Zinnia
-          </p>
+<p>
+Email:
+<br/>
+<a href="mailto:Ziyizhao0107@gmail.com">
+Ziyizhao0107@gmail.com
+</a>
+</p>
 
-          <p>
-            <strong>Phone:</strong> +86 19570063144
-          </p>
+<p>
+WhatsApp:
+<br/>
+<a href="https://wa.me/8619570063144">
++86 19570063144
+</a>
+</p>
 
-          <p>
-            <strong>Email:</strong> To be confirmed
-          </p>
+<p>
+  <strong>Company:</strong>
+  <br />
+  Guangzhou Zhengfang Chuangshe Electronic Technology Co., Ltd.
+</p>
 
-          <p>
-            <strong>WhatsApp:</strong> To be confirmed
-          </p>
+<p>
+  <strong>Location:</strong>
+  <br />
+  Guangzhou, China
+</p>
 
-          <p>
-            <strong>Address:</strong>
-            <br />
-            3F, Building C, Yunzhicai Industrial Park,
-            No. 11 Zhonghan Road, Zhongcun Street,
-            Panyu District, Guangzhou, Guangdong, China
-          </p>
-        </div>
+<p>
+  <strong>Business:</strong>
+  <br />
+  Customized LCD display solutions including stretched bar displays, round displays, square displays and industrial LCD screens.
+</p>
+</div>
       </div>
 
       <div className="copyright">
