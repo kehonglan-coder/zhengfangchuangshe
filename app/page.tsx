@@ -115,42 +115,37 @@ export default function Home() {
   return (
     <main>
       <section className="hero">
-        <div>
-          <p className="eyebrow">
-            Custom LCD Display Manufacturer Since 2008
-          </p>
+        <div className="hero-copy">
+          <p className="eyebrow">ZHENGFANG DISPLAY</p>
 
           <h1>
-  Custom LCD Display Manufacturer
-  <br />
-  Stretched Bar & OEM Display Solutions
-</h1>
-          
-            <p>
-  ZF Display specializes in customized LCD display solutions,
-including stretched bar displays, round LCD displays and OEM/ODM projects.
-We provide reliable display solutions for retail, digital signage and industrial applications worldwide.
-</p>
+            Custom LCD Display
+            <span>Manufacturer</span>
+          </h1>
+
+          <h2>
+            Stretched Bar LCD Display, Round LCD Display, Square LCD Display, OEM/ODM Custom Display Solutions
+          </h2>
+
+          <p>
+            We design and manufacture customized LCD display solutions for global B2B customers.
+          </p>
 
           <div className="hero-actions">
             <Link className="button" href="#contact">
-  Request a Quote
-</Link>
+              Get A Quote
+            </Link>
 
-            <Link
-              className="button button-outline"
-              href="/products"
-            >
+            <Link className="button button-outline" href="/products">
               Explore Products
             </Link>
           </div>
-        </div>
 
-        <div className="screen-art">
-          <div
-            className="screen"
-            aria-label="Custom ultra-wide LCD display illustration"
-          />
+          <div className="hero-badges">
+            <span className="hero-pill">Since 2008</span>
+            <span className="hero-pill">Customization</span>
+            <span className="hero-pill">Engineering Support</span>
+          </div>
         </div>
       </section>
 

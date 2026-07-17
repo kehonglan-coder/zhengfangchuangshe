@@ -14,15 +14,16 @@ export function Header() {
     <header className="header">
       <Link href="/" className="brand">
         <Image
-          src="/images/zf-logo.png"
-          alt="ZF Display Logo"
-          width={48}
-          height={48}
+          src="/images/logo-final.png"
+          alt="Zhengfang Display Logo"
+          width={56}
+          height={56}
           priority
+          className="header-logo"
         />
 
         <div>
-          <strong>ZF DISPLAY</strong>
+          <strong>Zhengfang Display</strong>
           <small>Custom LCD Display Manufacturer</small>
         </div>
       </Link>
@@ -49,14 +50,15 @@ export function Footer() {
         <div>
           <Link href="/" className="brand">
             <Image
-              src="/images/zf-logo.png"
-              alt="ZF Display Logo"
-              width={52}
-              height={52}
+              src="/images/logo-final.png"
+              alt="Zhengfang Display Logo"
+              width={56}
+              height={56}
+              className="header-logo"
             />
 
             <div>
-              <strong>ZF DISPLAY</strong>
+              <strong>Zhengfang Display</strong>
               <small>Since 2008</small>
             </div>
           </Link>
