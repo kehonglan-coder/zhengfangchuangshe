@@ -6,6 +6,7 @@ import {
   SectionTitle,
 } from "@/components/ui";
 
+import { ContactForm } from "@/app/contact/contact-form";
 const applications = [
   "Retail Shelves",
   "Supermarkets & Shopping Malls",
@@ -120,23 +121,21 @@ export default function Home() {
           </p>
 
           <h1>
-           Custom Stretched Bar LCD Displays
-for Global Display Solutions
-          </h1>
-
+  Custom LCD Display Manufacturer
+  <br />
+  Stretched Bar & OEM Display Solutions
+</h1>
           
             <p>
-  Guangzhou Zhengfang Chuangshe Electronic Technology Co., Ltd.
-is a professional LCD display manufacturer specializing in
-stretched bar displays, round displays and customized display solutions.
-With OEM and ODM capabilities, we serve global customers in retail,
-digital signage and industrial applications.
+  ZF Display specializes in customized LCD display solutions,
+including stretched bar displays, round LCD displays and OEM/ODM projects.
+We provide reliable display solutions for retail, digital signage and industrial applications worldwide.
 </p>
 
           <div className="hero-actions">
-            <Link className="button" href="/contact">
-              Get a Quote
-            </Link>
+            <Link className="button" href="#contact">
+  Request a Quote
+</Link>
 
             <Link
               className="button button-outline"
@@ -341,11 +340,64 @@ digital signage and industrial applications.
             team will help you evaluate the next step.
           </p>
 
-          <Link className="button" href="/contact">
+         <Link className="button" href="#contact">
             Request a Quote
           </Link>
         </div>
       </section>
-    </main>
-  );
+
+
+<section id="contact" className="section contact-section">
+
+  <div className="detail-grid">
+
+    <div>
+      <ContactForm />
+    </div>
+
+
+    <aside className="dark-panel">
+
+      <h2>Contact Information</h2>
+
+      <p>
+        <strong>Contact Person:</strong>
+        <br />
+        Zinnia
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <br />
+        <a href="mailto:Ziyizhao0107@gmail.com">
+          Ziyizhao0107@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <strong>WhatsApp:</strong>
+        <br />
+        +86 19570063144
+      </p>
+
+      <p>
+        <strong>Company:</strong>
+        <br />
+        ZF Display (Guangzhou Zhengfang Chuangshe Electronic Technology Co., Ltd.)
+      </p>
+
+      <p>
+        <strong>Location:</strong>
+        <br />
+        Guangzhou, China
+      </p>
+
+
+    </aside>
+
+  </div>
+
+</section>
+</main>
+);
 }

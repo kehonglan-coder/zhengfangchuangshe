@@ -35,9 +35,9 @@ export function Header() {
         ))}
       </nav>
 
-      <Link className="button button-small" href="/contact">
-        Get a Quote
-      </Link>
+     <Link className="button button-small" href="#contact">
+  Get a Quote
+</Link>
     </header>
   );
 }

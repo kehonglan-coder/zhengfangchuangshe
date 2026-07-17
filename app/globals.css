@@ -52,7 +52,7 @@ h3 {
   gap: 24px;
   padding: 0 max(5vw, 32px);
   border-bottom: 1px solid #e8eef2;
-  position: sticky;
+position: sticky;
   top: 0;
   background: #fffd;
   backdrop-filter: blur(14px);
@@ -128,23 +128,24 @@ h3 {
 .hero {
   background: linear-gradient(125deg, #061526 35%, #0b3157);
   color: white;
-  min-height: 610px;
-  padding: 90px max(5vw, 32px);
+  min-height: 380px;
+  padding: 80px max(5vw, 32px) 50px;
   display: grid;
   grid-template-columns: 1fr 1.1fr;
-  align-items: center;
+ align-items:start;
   gap: 60px
 }
 
 .hero h1 {
-  font-size: clamp(42px, 5vw, 76px);
-  max-width: 750px
+  font-size: clamp(30px, 3vw, 40px);
+  max-width: 600px;
 }
 
 .hero p {
   color: #c2d3e2;
   font-size: 18px;
-  max-width: 600px
+  line-height: 1.7;
+  max-width: 600px;
 }
 
 .eyebrow {
@@ -215,7 +216,7 @@ h3 {
 }
 
 .section {
-  padding: 92px max(5vw, 32px)
+  padding: 30px max(5vw, 32px)
 }
 
 .section-alt {
@@ -341,8 +342,11 @@ h3 {
 
 .dark-panel {
   background: var(--navy);
-  color: #fff;
-  padding: 50px
+  color:#fff;
+  padding:50px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
 .dark-panel p {
@@ -361,10 +365,12 @@ h3 {
   font-size: 13px
 }
 
+
+ 
 .page-hero {
   background: var(--navy);
-  color: #fff;
-  padding: 86px max(5vw, 32px) 74px
+  color:#fff;
+  padding:55px max(5vw,32px) 60px;
 }
 
 .page-hero h1 {
@@ -394,9 +400,11 @@ h3 {
 
 .detail-grid {
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 60px
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 50px;
+  
 }
+
 
 .detail-image {
   min-height: 390px
@@ -445,13 +453,23 @@ h3 {
   gap: 7px
 }
 
-.form input,
-.form select,
-.form textarea {
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
   font: inherit;
-  padding: 12px;
-  border: 1px solid #bccbd7;
-  background: #fff
+  padding: 14px 16px;
+  border: 1px solid #d7e0e8;
+  border-radius: 6px;
+  background: #fff;
+  color: #1d3557;
+  transition: border-color 0.2s ease;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #1683d8;
+  box-shadow: 0 0 0 2px rgba(22,131,216,0.15);
 }
 
 .form textarea {
@@ -631,14 +649,16 @@ footer {
 }
 
 .contact-form {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+ display:grid;
+ grid-template-columns: repeat(2,1fr);
+ gap:16px;
+
 }
 
+
 .contact-form textarea {
-  grid-column: 1 / -1;
-  min-height: 70px;
+    grid-column: 1 / -1;
+    min-height: 45px;
   resize: vertical;
 }
 
@@ -646,7 +666,7 @@ footer {
   grid-column: 1 / -1;
   width: 180px;
   height: 48px;
-  margin: 5px auto 0;
+ margin: -5px auto 0;
 
   background: #1683d8;
   color: white;
@@ -658,4 +678,7 @@ footer {
   font-weight: 600;
 
   cursor: pointer;
+}
+.contact-section {
+  padding-top: 20px;
 }

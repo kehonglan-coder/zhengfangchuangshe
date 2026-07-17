@@ -4,12 +4,10 @@ Request a Quote
 </p>
 
 <h1>
-Contact ZF Display for
-<br />
-Custom LCD Display Solutions
+Request a Custom LCD Display Solution
 </h1><p>
-Tell us your display requirements and our engineering team will provide a suitable solution.
-</p></section><section className="section"><div className="detail-grid"><div>
+Tell us your display requirements, and our engineering team will provide a professional customized display solution.
+</p></section><section className="section contact-section"><div className="detail-grid"><div>
 <ContactForm />
 </div><aside className="dark-panel">
  <h2>Contact Information</h2>

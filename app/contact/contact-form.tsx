@@ -38,42 +38,44 @@ Share your project requirements with us. Our engineering team will provide profe
 
         <input
           name="name"
-          placeholder="Your Name *"
+         placeholder="Full Name *"
           required
         />
 
         <input
   name="company"
-  placeholder="Company Name"
+ placeholder="Company Name *"
 />
 
 
-<input
-  name="website"
-  placeholder="Company Website"
-/>
+
         
 
        <input
   name="email"
-  placeholder="Email Address *"
+ placeholder="Business Email *"
   type="email"
 />
 
 
 <input
+  name="website"
+placeholder="Company Website (Optional)"
+/>
+
+<input
   name="size"
-  placeholder="Display Size (e.g. 37 inch)"
+placeholder="Display Size / Model (e.g. 37 inch)"
 />
         <input
           name="whatsapp"
-          placeholder="WhatsApp Number"
+         placeholder="WhatsApp / Phone"
         />
 
 
      <textarea
 name="message"
-placeholder="Tell us about your display requirements..."
+placeholder="Tell us about your project requirements..."
 rows={3}
 />
 
