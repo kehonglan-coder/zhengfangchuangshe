@@ -14,7 +14,7 @@ export function Header() {
     <header className="header">
       <Link href="/" className="brand">
         <Image
-          src="/images/logo-final.png"
+          src="/images/zf-logo-transparent.png"
           alt="Zhengfang Display Logo"
           width={56}
           height={56}
@@ -50,7 +50,7 @@ export function Footer() {
         <div>
           <Link href="/" className="brand">
             <Image
-              src="/images/logo-final.png"
+              src="/images/zf-logo-transparent.png"
               alt="Zhengfang Display Logo"
               width={56}
               height={56}

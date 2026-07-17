@@ -90,6 +90,7 @@ h3 {
   width: auto;
   height: 56px;
   object-fit: contain;
+  border-radius: 10px;
   background: transparent !important;
   padding: 0 !important;
   border: 0 !important;
